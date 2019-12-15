@@ -1,0 +1,22 @@
+idlj -fall  Conta.idl
+
+javac *.java ContaApp/*.java
+
+orbd -ORBInitialPort 1051&
+tnameserv -ORBInitialPort 1051&
+
+java -jar ContaServer.jar -ORBInitialPort 1051 -ORBInitialHost localhost 2>serverlog.txt&
+java -jar ContaClient.jar -ORBInitialPort 1051 -ORBInitialHost localhost 2>serverlog.txt
+
+
+
+
+tnameserv
+
+transformar o codigo de corba para JAVA RMI
+
+APOS COM WEBSERVICE
+
+
+
+sergiotcarvalho@gmail.com

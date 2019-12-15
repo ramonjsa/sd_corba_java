@@ -1,0 +1,5 @@
+interface Conta {
+	void deposito(in float valor);
+	void saque(in float valor);
+	float saldo();
+};
